@@ -1,0 +1,1901 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+:root
+{
+    --green: #38ccae;
+    --dark: #1b1b1b;
+    --grey: #A9A9A9;
+    --LightGray: #708090;
+    --HireMePurple: rgb(46,21,50);
+    --HireMeRose: rgb(152,30,63);
+}   
+
+li, a{
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size:16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.InsideHeaderNav{
+    position: fixed;
+    right: 50px;
+    display:flex;
+    justify-content:space-between;
+    width: 800px;
+    height: 100px;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 0;
+    
+    
+}
+
+.nav_links
+{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+    margin-top: 10px;
+}
+
+.nav_links li a {
+    text-shadow:white 10px 10px 10px ;
+    transition: all 0.3s ease 0s;
+    font-size: 26px;
+}
+
+.nav_links li a:hover {
+    color: var(--green);
+    text-shadow:var(--green) 20px 20px 20px ;
+}
+
+.active{
+    color: var(--green);
+}
+
+
+body
+{
+    background-color:  rgb(34,34,34);
+    font-family: Arial;
+    padding: 40px 0px 40px 0px;
+    display:block;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1
+{
+    font-size: 36;
+    margin-bottom: 10px;  
+    font-size: 20px;         
+}
+
+h2
+{
+    font-size: 28px;
+                
+}
+
+h3{
+    margin-top: 5px;
+}
+span
+{
+    color: var(--green);
+    font-size:15px;            
+}
+
+section,header
+{
+    padding: 10px 60px 20px 60px;
+} 
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+header ul
+{
+    list-style: none;
+}
+
+@media(max-width: 1000px)
+{
+    .InsideHeaderNav{
+        position: absolute;
+        display: block;
+        background-color: #1b1b1b;
+        border-radius: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.Name{
+    
+    position: absolute;
+    color: white;
+    left: 70px;
+    top: 50px;
+}
+
+.Name h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.WelcomeText{
+    float: left;
+    width: 1500px;
+    height: 1000px;
+    
+    position: absolute;
+    font-size: 2rem; 
+    top:30%;
+    margin-left: 150px;
+}
+.WelcomeText h2{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: white;
+}
+
+.WelcomeText h1{
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: 800;
+}
+.WelcomeText p{
+    color:white; 
+}
+
+.HireMeButton{
+    position: absolute;
+    height: 110px;
+    width: 300px;
+    bottom: 300px;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 25px;
+    box-shadow: white 0px 0px 30px 0px;
+    background-color: transparent;
+    transition: box-shadow 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.HireMeButton p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+}
+.HireMeButton:hover{
+    
+    color:white;
+    box-shadow: rgb(254,15,63) 10px 10px 50px 10px;
+    
+}
+
+.LetsTalkButton{
+    position: absolute;
+    height: 110px;
+    width: 300px;
+    bottom: 300px;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 25px;
+    box-shadow: #38ccae 0px 0px 30px 0px;
+    background-color: transparent;
+    transition: box-shadow 0.5s, color 0.5s;
+    cursor: pointer;
+    margin-left: 350px;
+    left: 150px;
+    
+    
+    
+}
+.LetsTalkButton p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.LetsTalkButton:hover{
+    box-shadow: white 10px 10px 50px 10px;
+    color: #38ccae;
+}
+
+.backgroundImage{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    left: 2000px;
+    top:500px;
+}
+
+.InsideWindow{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0;
+    width: 490px;
+    height: 900px;
+    overflow: auto;
+    background-color: black;/* 1b1b1b*/
+    box-shadow: 0 0 40px rgb(254,15,63);
+    animation: spin 2s ease-in-out forwards;
+    border-radius: 20px 20px 120px 10px;
+    overflow: hidden;
+    
+}
+.InsideWindowTalk{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 700px;
+    height: 900px;
+    overflow: auto;
+    background-color: #1b1b1b;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    animation: spin 2s ease-in-out forwards;
+    border-radius: 25px;
+}
+@keyframes spin{
+    0%{
+        transform: translateX(10%) translateY(-100%) rotate(0deg);
+        
+    }
+    100%{
+        transform : translateX(150%) translateY(20%) rotate(360deg)
+        
+    }
+}
+
+span{
+    font-size: 3rem;
+    position: absolute;
+    top:10;
+    right: 0;
+    
+}
+
+.ContactForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 150px;
+    width: 600px;
+    top: 50px;
+    left: 50px;
+    border: #38ccae 1px solid;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.sms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 275px;
+    height: 600px;
+    top: 250px;
+    left: 50px;
+    box-shadow: #38ccae 0px 0px 30px 0px;
+    border-radius: 25px;
+    color: white;
+    background-color: transparent;
+    font-size: 4rem;
+    font-weight: 1000;
+    transition: box-shadow 0.6s, color 0.5s;
+    
+}
+
+.sms:hover{
+    box-shadow: white 10px 10px 50px 10px;
+    color: #38ccae;
+    cursor: pointer;
+}
+
+.InsideSMSButton{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1b1b1b;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    animation: slideFromLeft 1s ease-in-out forwards;
+    border-radius: 25px;
+
+}
+
+@keyframes slideFromLeft{
+    from{
+        transform: translateX(-100%);
+        
+    }
+    to{
+        transform : translateX(0)
+        
+    }
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 275px;
+    height: 600px;
+    top: 250px;
+    left: 375px;
+    box-shadow: #38ccae 0px 0px 30px 0px;
+    border-radius: 25px;
+    color: white;
+    background-color: transparent;
+    font-size: 4rem;
+    font-weight: 1000;
+    transition: box-shadow 0.6s, color 0.5s;
+    
+}
+
+.email:hover{
+    box-shadow: white 10px 10px 50px 10px;
+    color: #38ccae;
+    cursor: pointer;
+}
+
+.InsideEmailButton{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1b1b1b;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    animation: slideFromRight 1s ease-in-out forwards;
+    border-radius: 25px;
+
+}
+
+@keyframes slideFromRight{
+    from{
+        transform: translateX(100%);
+        
+    }
+    to{
+        transform : translateX(0)
+        
+    }
+}
+
+.SmsPhoneNumber{
+    display: block;
+    position: fixed;
+    height: 150px;
+    width: 400px;
+    top: 50px;
+    left: 150px;
+    background-color: transparent;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    border-radius: 25px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+.SmsPhoneNumber:focus{
+    background-color:#231e1e;
+    
+}
+
+.SmsMessageArea{
+    display: block;
+    position: fixed;
+    height: 400px;
+    width: 600px;
+    top: 250px;
+    left: 50px;
+    background-color: transparent;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    border-radius: 25px;
+    font-size: 2rem;
+    color: white;
+}
+
+.SmsSubmitButton{
+    display: block;
+    position: fixed;
+    height: 150px;
+    width: 400px;
+    top: 700px;
+    left: 150px;
+    background-color: transparent;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    border-radius: 25px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    transition: box-shadow 0.6s, color 0.5s;
+}
+.SmsSubmitButton:hover{
+    box-shadow: white 10px 10px 50px 10px;
+    color: #38ccae;
+    cursor: pointer;
+}
+
+.AdresEmail{
+    display: block;
+    position: fixed;
+    height: 100px;
+    width: 420px;
+    top: 60px;
+    left: 140px;
+    background-color: transparent;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    border-radius: 25px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+.AdresEmail:focus{
+    background-color:#231e1e;
+    
+}
+
+
+.EmailMessage{
+    display: block;
+    position: fixed;
+    height: 420px;
+    width: 600px;
+    top: 220px;
+    left: 50px;
+    background-color: transparent;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    border-radius: 25px;
+    font-size: 2rem;
+    color: white;
+}
+
+.EmailSubmitButton{
+    display: block;
+    position: fixed;
+    height: 140px;
+    width: 420px;
+    top: 700px;
+    left: 150px;
+    background-color: transparent;
+    box-shadow: 0 0 20px white, 0 0 10px #38ccae;
+    border-radius: 25px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    transition: box-shadow 0.6s, color 0.5s;
+}
+.EmailSubmitButton:hover{
+    box-shadow: white 10px 10px 50px 10px;
+    color: #38ccae;
+    cursor: pointer;
+}
+
+.close-animation{
+    animation: slideOut 0.8s ease-out forwards;
+}
+
+@keyframes slideOut{
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+
+}
+
+.close-animationSMS{
+    animation: SLIDEOUT 0.8s ease-out forwards;
+}
+
+@keyframes SLIDEOUT{
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.Opispodkatem1{
+    position: fixed;
+    transform: rotate(-45deg);
+    top: 20px;
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 5px 7px 10px rgba(255, 255, 255, 0.5);
+}
+.Opispodkatem2{
+    position: fixed;
+    transform: rotate(-45deg);
+    top: 35px;
+    
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 5px 7px 10px rgba(255, 255, 255, 0.5);
+}
+
+.BgIMGHireMe{
+    position: absolute;
+    top: 0;
+    left: -100px;
+    height: 900px;
+    width: 700px;
+     
+}
+
+.Screen{
+    position: absolute;
+    background-color:rgb(254,15,63);
+    top: 115px;
+    left: 110px;
+    width: 270px;
+    height: 275px;
+    border-radius:10px;
+    
+}
+
+.Wlewo{
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    top: 595px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+}
+
+.Wprawo{
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    top: 595px;
+    left: 120px;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+}
+
+.Wgore{
+    border: 0;
+    
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    top: 550px;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.Wdol{
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    top: 640px;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 0 5px 5px;
+}
+
+.Sellect{
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    top:595px;
+    left: 310px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.SellectText{
+    border: 0;
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: transparent;
+    color: rgb(160, 150, 150);
+    position: absolute;
+    top: 570px;
+    left: 280px;
+    transform: rotate(-27deg);
+}
+
+.End{
+    border:0;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    top: 555px;
+    left: 395px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    
+}
+.Close{
+    border: 0;
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: transparent;
+    color: rgb(160, 150, 150);
+    position: absolute;
+    top: 630px;
+    right: 20px;
+    transform: rotate(-27deg);
+    
+}
+
+
+.FirstWindow{
+    display: none;
+    position: absolute;
+    background-color:black;
+    top: 165px;
+    left: 230px;
+    width: 235px;
+    height: 235px;
+    border-radius:10px;
+}
+
+.circle{
+    position: absolute;
+    top: 410px;
+    left: 200px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.circle1{
+    position: absolute;
+    top: 410px;
+    left: 220px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.circle2{
+    position: absolute;
+    top: 410px;
+    left: 240px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.circle3{
+    position: absolute;
+    top: 410px;
+    left: 260px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.circle4{
+    position: absolute;
+    top: 410px;
+    left: 280px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+/* Klasa i Animacja otwierania bocznego okna po kliknięciu przycisku Sellect */
+.Open-animationSideWindow{
+    animation: SlideIn 0.8s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes SlideIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Boczne okna po kliknięciu przycisku Sellect */
+/* 1 */
+#BoczneOknoDlaZdj{
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    width: 420px;
+    height: 780px;
+    top: 60px;
+    left: 850px;
+    border-radius: 25px;
+    border: solid 2px var(--HireMeRose);
+    box-shadow: 0 0 30px 10px var(--HireMeRose);
+    transition: box-shadow 0.6s;
+    
+}
+
+#BoczneOknoDlaZdj:hover{
+    box-shadow: 0 0 30px 20px var(--HireMeRose); 
+}
+
+/* 2 */
+.BoczneOknoDlaZdj1{
+    display: none;
+    position: absolute;
+    background-color: green;
+    width: 100px;
+    height: 700px;
+    top: 60px;
+    left: 850px;
+    
+}
+/* Logo Bocznego okna dla okna "Zagraj" */
+.GraLogo{
+    position: absolute;
+    color: white;
+    transform: rotate(-25deg);
+    top:-30px;
+    left: 10px;
+    font-size: 3rem;
+    font-weight: 800;
+    
+}
+
+.GraLogo p{
+    text-shadow: 10px 10px 18px var(--grey);
+}
+
+/* Opis Bocznego okna dla okna "Zagraj" */
+.OpisGry{
+    position: absolute;
+    
+    font-size: 1.7rem;
+    
+    top: 150px;
+    text-align: center;
+}
+
+/* Kolor tekstu w Bocznym oknie dla okna "Zagraj" */
+.OpisGry p{
+    color: var(--grey);
+}
+
+/* 3 */
+.BoczneOknoDlaZdj2{
+    display: none;
+    position: absolute;
+    background-color: rgb(133, 21, 21);
+    width: 100px;
+    height: 700px;
+    top: 60px;
+    left: 850px;
+    
+}
+
+/* 4 */
+.BoczneOknoDlaZdj3{
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    width: 420px;
+    height: 780px;
+    top: 60px;
+    left: 850px;
+    border-radius: 25px;
+    border: solid 2px var(--HireMeRose);
+    box-shadow: 0 0 30px 10px var(--HireMeRose);
+    transition: box-shadow 0.6s;
+    overflow: hidden;
+}
+
+.BoczneOknoDlaZdj3:hover{
+    box-shadow: 0 0 30px 20px var(--HireMeRose); 
+}
+
+/* Tekst po wejściu w boczne okno zakładki "Umiejętności" */
+.BoczneOknoDlaZdj3 .OpisMenu p{
+    position: absolute;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    top: 30px;
+    
+}
+
+/* podłoże dla Karty oraz Przycisku w lewo prawo po wejściu w boczne okno zakładki "Umiejętności" */
+.MenuUmiejetnosci{
+    
+    position: absolute;
+    height: 450px;
+    width: 420px;
+    top: 200px; 
+    left: 0px;
+}
+
+.Card{
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 25px;
+    height: 450px;
+    width: 250px;
+    top: 0px; 
+    left: 85px; 
+    box-shadow: 0 0 10px 5px var(--green);
+    transition: box-shadow 0.6s;
+    
+}
+
+.Card:hover{
+    box-shadow: 0 0 30px 15px var(--green);
+}
+
+.ToLeft{
+    position: absolute;
+    top: 200px;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 49px solid var(--green);
+    
+}
+
+.ToRight{
+    position: absolute;
+    top: 200px;
+    left: 355px;
+    background-color: transparent;
+    width: 0px;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 49px solid var(--green);
+}
+
+
+.Triagle{
+    cursor: pointer;
+    position: absolute;
+    top: -35px;
+    left: 0px;
+    width: 70px;
+    transform: rotate(0deg);
+
+}
+
+.Triagle2{
+    cursor: pointer;
+    position: absolute;
+    top: -35px;
+    left: -55px;
+    width: 70px;
+    transform: rotate(180deg);
+
+}
+
+#CloseMe{
+    cursor: pointer;
+    position: absolute;
+    transform: rotate(180deg);
+    left: 300px;
+    top: 660px;
+
+}
+
+#CloseMe1{
+    cursor: pointer;
+    position: absolute;
+    transform: rotate(180deg);
+    left: 300px;
+    top: 660px;
+
+}
+
+#CloseMe2{
+    cursor: pointer;
+    position: absolute;
+    transform: rotate(180deg);
+    left: 300px;
+    top: 660px;
+
+}
+
+#CloseMe3{
+    cursor: pointer;
+    position: absolute;
+    transform: rotate(180deg);
+    left: 300px;
+    top: 660px;
+
+}
+
+.MenuInsideUmiejetnosci{
+    border: 0;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-radius: 25px;
+    height: 447px;
+    width: 247px;
+}
+
+.Open-animationSideWindowSkills{
+    animation: GetIn 0.8s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes GetIn{
+    0%{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.Close-animationSideWindowSkills{
+    animation: GetOut 0.8s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes GetOut{
+    0%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+}
+
+/* Okno Programowanie & środek w zakładce Umiejętności */
+.FirstImageInsideSkills{
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    border-radius: 25px;
+    width: 420px;
+    height: 780px;
+    top: -200px;
+    left: -87px;
+}
+
+.ProgramowanieTloIMG{
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 420px;
+    height: 780px;
+}
+/* Okno Jira i & środek w zakładce Umiejętności */
+.SecondImageInsideSkills{
+    cursor: default;
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    border-radius: 25px;
+    width: 420px;
+    height: 780px;
+    top: -200px;
+    left: -87px;
+}
+
+.Task{
+    position: absolute;
+    color:white;
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 800;
+    top: 10px;
+}
+#myCheckbox{
+    cursor: pointer;
+    position:absolute;
+    left: 10px;
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;  
+}
+
+.myCheckboxText{
+    cursor: pointer;
+    position: absolute;
+    left: 50px;
+}
+
+.Zastosowanie{
+    cursor: default;
+    position: absolute;
+    font-weight: 700;
+    font-size: 1.5rem;
+    top: 40px;
+    left: 15px;
+}
+
+.Icons{
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    top:110px;
+    left: 15px;
+
+}
+.attachment{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    background-color: #403f46;
+}
+.attachment img{
+    width: 50px;
+    height: 50px;
+}
+.attachment:hover{
+    cursor: pointer;
+    background-color: #676464;
+}
+
+.ChildTicket{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 0px;
+    left: 60px;
+    background-color: #403f46;
+}
+.ChildTicket img{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 3px;
+    left: 2px;
+}
+.ChildTicket:hover{
+    cursor: pointer;
+    background-color: #676464;
+}
+
+.link{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 0px;
+    left: 120px;
+    background-color: #403f46;
+}
+.link img{
+    position: absolute;
+    width: 40px;
+    height: 40x;
+    top:5px;
+    left:4px;
+}
+.link:hover{
+    cursor: pointer;
+    background-color: #676464;
+}
+
+.MenuInsideJiraPage{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 0px;
+    left: 180px;
+    background-color: #403f46;
+}
+.MenuInsideJiraPage img{
+    position: absolute;
+    
+    height: 30px;
+    width: 30px;
+    left: 10px;
+    bottom: 10px;
+    
+}
+.MenuInsideJiraPage:hover{
+    cursor: pointer;
+    background-color: #676464;
+}
+
+.OpisPodzadania{
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 800;
+    top: 150px;
+    left: 15px;
+}
+.DodajOpis{
+    cursor:text;
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 40px;
+    top: 220px;
+    left: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: left;
+    align-items: center;
+    border-radius: 10px;
+}
+.DodajOpis:hover{
+    background-color: #403f46;
+}
+
+.Podzadania{
+    position: absolute;
+    top:280px;
+    left: 15px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.Kropki{
+    position: absolute;
+    top: 320px;
+    right: 70px;
+    width: 40px;
+    height: 40px;
+    
+}
+.Kropki:hover{
+    cursor: pointer;
+    background-color: #403f46;
+    border-radius: 50%;
+}
+
+
+.Plus{
+    position: absolute;
+    top: 320px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.Plus:hover{
+    cursor: pointer;
+    background-color: #403f46;
+    border-radius: 50%;
+}
+.WykresLiniowyZielony{
+    position: absolute;
+    top: 360px;
+    left: 15px;
+    width: 200px;
+    height: 40px;
+    background-color: #0d7f01;
+    border-radius: 25px 0 0 25px;
+}
+
+.WykresLiniowyNiebieski{
+    position: absolute;
+    top: 360px;
+    left: 220px;
+    width: 100px;
+    height: 40px;
+    background-color: #1d3789;
+    border-radius: 0 25px 25px 0;
+}
+
+.Gotowe{
+    position: absolute;
+    top:360px;
+    left: 325px;
+}
+
+/* TASKI */
+/* 1 */
+.Taski{
+    position: absolute;
+    left: 10px;
+    top:410px;
+    height: 228px;
+    width: 400px;
+    background-color: #403f46;
+    border-radius: 10px;
+}
+
+.PierwszyTask{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-bottom: 1px solid white;
+    width: 380px;
+    height: 75px;
+}
+
+.Pro-01{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 22.5px;
+}
+
+.PierwszyTask label{
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 22.5px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+.PierwszyTask p{
+    
+    width: 120px;
+    position: absolute;
+    left: 105px;
+    top:0px;
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.Priorytet1{
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.KolkoNaLogo{
+    position: absolute;
+    top: 15px;
+    left: 265px;
+    background-color:#285868;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.KolkoNaLogo img{
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 100px;
+    height: 50px;
+}
+
+.Gotowe1{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 315px;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #0d7f01;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+.Gotowe1:hover{
+    background-color: #2c9e1f;
+    cursor: pointer;
+}
+
+/* 2 */
+.DrugiTask{
+    position: absolute;
+    top: 76px;
+    left: 10px;
+    border-bottom: 1px solid white;
+    width: 380px;
+    height: 75px;
+}
+
+.Pro-02{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 22.5px;
+}
+
+.DrugiTask label{
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 22.5px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+.DrugiTask p{
+    position: absolute;
+    left: 110px;
+    top: 11.5px;
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.Priorytet2{
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.KolkoNaLogo2{
+    position: absolute;
+    top: 15px;
+    left: 265px;
+    background-color:#285868;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.KolkoNaLogo2 img{
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 100px;
+    height: 50px;
+}
+
+.DoZrobienia{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 315px;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #343336;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+.DoZrobienia:hover{
+    background-color: #4d4c50;
+    cursor: pointer;
+}
+
+/* 3 */
+.TrzeciTask{
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    width: 380px;
+    height: 75px;
+}
+
+.Pro-03{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 22.5px;
+}
+
+.TrzeciTask label{
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 22.5px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+.TrzeciTask p{
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    width: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.Priorytet3{
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    width: 30px;
+    height: 30px;
+}
+
+.KolkoNaLogo3{
+    position: absolute;
+    top: 15px;
+    left: 265px;
+    background-color:#285868;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.KolkoNaLogo3 img{
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 100px;
+    height: 50px;
+}
+
+.Gotowe2{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 315px;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #0d7f01;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+.Gotowe2:hover{
+    background-color: #2c9e1f;
+    cursor: pointer;
+}
+
+.Aktywność{
+    position: absolute;
+    top: 640px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Pokaz{
+    position: absolute;
+    top: 670px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Komentarze{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    background-color: #403f46;
+    height: 30px;
+    width: 130px;
+    top: 685px;
+    left: 85px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Komentarze:hover{
+    background-color: #676464;
+    
+}
+
+.KolkoNaLogo4{
+    position: absolute;
+    top: 725px;
+    left: 10px;
+    background-color:#285868;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.KolkoNaLogo4 img{
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 100px;
+    height: 50px;
+}
+
+#DodajKomentarzInput{
+    position: absolute;
+    top: 725px;
+    left: 70px;
+    background-color: #403f46;
+    
+    width: 240px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+#DodajKomentarzInput:hover{
+    cursor: pointer;
+    background-color: #676464;
+    
+}
+
+.Komentarz input::placeholder {
+    color: #b6afaf;
+}
+
+.StrikeThrough{
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+.ThirdImageInsideSkills{
+    cursor: default;
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    border-radius: 25px;
+    width: 420px;
+    height: 780px;
+    top: -200px;
+    left: -87px;
+}
+
+.shadow{
+    position: absolute;
+    border: 1px solid white;
+    width: 190px;
+    height: 90px;
+    top: 120px;
+    left: 110px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px 25px #be0807;
+}
+
+.OfficeLogo{
+    position: absolute;
+    bottom: 430px;
+    left: 0px;
+    width: 400px;
+    height: 400px;
+    
+}
+
+.ExcelPNG{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 5px var(--green);
+}
+
+.OneNotePNG{
+    position: absolute;
+    top: 410px;
+    left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 5px #7f3878;
+}
+
+.OutlookPNG{
+    position: absolute;
+    top: 520px;
+    left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 5px var(--green);
+}
+
+.PowerPointPNG{
+    position: absolute;
+    top: 520px;
+    left: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 5px #be0807;
+}
+
+.TeamsPNG{
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 5px #5558af;
+}
+
+.WordPNG{
+    position: absolute;
+    top: 410px;
+    left: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 5px #2a5797;
+}
+
+.SkypePNG{
+    position: absolute;
+    top:630px;
+    left: 20px;
+    
+}
+.shadowForSkype{
+    position: absolute;
+    border: 1px solid white;
+    top: 660px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px 35px #0189d7;
+}
+
+.TekstOffice{
+    
+    position: absolute;
+    top:360px;
+    left: 128px;
+    width: 160px;
+    height: 200px;
+    font-size: 20px;
+    
+}
+
+
+
+
+
+.FourthImageInsideSkills{
+    cursor: default;
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    border-radius: 25px;
+    width: 420px;
+    height: 780px;
+    top: -200px;
+    left: -87px;
+}
+
+.GitLogo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    
+}
+
+.FourthImageInsideSkills p {
+    position: absolute;
+    top: 280px;
+    font-size: 1.3rem;
+    font-weight: 600;    
+    margin-left: 10px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* 5 */
+.BoczneOknoDlaZdj4{
+    perspective: 1000px;
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    width: 420px;
+    height: 780px;
+    top: 60px;
+    left: 850px;
+    border-radius: 25px;
+    border: solid 2px var(--HireMeRose);
+    box-shadow: 0 0 30px 10px var(--HireMeRose);
+    transition: box-shadow 0.6s;
+
+}
+
+.Circle1{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    top: 690px;
+    left: 135px;
+    border-radius: 50%;
+}
+.Circle2{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    top: 690px;
+    left: 175px;
+    border-radius: 50%;
+}
+.Circle3{
+    
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    top: 690px;
+    left: 215px;
+    border-radius: 50%;
+}
+.Circle4{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    top: 690px;
+    left: 255px;
+    border-radius: 50%;
+}
+
+.Szesciokat1{
+    position: absolute;
+    top: 135px;
+    left: 0px;
+    width: 210px;
+    height: 210px;
+    transition: transform 0.8s ease;
+}
+
+.Szesciokat1:hover{
+    transform: rotateY(180deg);
+}
+
+.Szesciokat2{
+    position: absolute;
+    top: 330px;
+    left: 0px;
+    width: 210px;
+    height: 210px;
+}
+
+.Szesciokat3{
+    position: absolute;
+    top: 435px;
+    left: 170px;
+    width: 210px;
+    height: 210px;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Przycisk chowający boczne okna */
+.Hide{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 735px;
+    left: 230px;
+    width: 65px;
+    height: 25px;
+    
+    border-radius: 10px;
+    transform: rotate(-27deg);
+}
+
+/* Opis Przycisku chowającego boczne okna */
+.HideText{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    background-color: transparent;
+    color: rgb(160, 150, 150);
+    position: absolute;
+    top: 760px;
+    left: 245px;
+    transform: rotate(-27deg);
+}
+

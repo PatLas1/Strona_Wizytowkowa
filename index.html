@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web CV Patryk Laszkowski</title>
+        <link rel="stylesheet" href="styleindex.css"/>
+
+        
+    </head>
+    <body>   
+        <img src="images/ProfilePicture.jpg" class="backgroundImage" alt="">
+            <header>
+                <div class="InsideHeaderNav">
+                    <nav class="navigation"> 
+                        <ul class="nav_links">
+                            <li> <a href="index.html" class="active">Strona Główna</a> </li>
+                            <li> <a href="Cv.html">CV</a> </li>
+                            <li> <a href="Portfolio.html">Portfolio</a> </li>
+                            <li> <a href="Grafik.html">Graficzna Obróbka</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="container">
+                <div class="Name">
+                    <h1>Patryk.</h1>
+                </div>
+                <div class="WelcomeText">
+                    <h2>Cześć, nazywam się Patryk </h2>
+                    <h1>Junior Service Desk Consultant</h1>
+                    <p>Bardzo zmotywowany Junior Service Desk Colsultant z aspiracjami na zostanie w przyszłości programistą.
+                       Od zawsze fascynowała mnie informatyka i w tym kierunku się realizuję. Swoją drogę zacząłem od liceum gdzie zdecydowałem, że to właśnie informatyka jest czymś co chcę robić i się spełniać.
+                       Pierwszym krokiem zbliżającym do osiągnięcia celu było pójście na studia Informatyczne oraz dostanie się do pierwszej pracy.
+                       Obecnie pracuję w 4 osobowym zespole, w którym świetnie się odnajduję. Pracuję w modelu hybrydowym. Moja praca polega na zarządzaniu zleceniami od klientów i kontrolowaniu procesu realizacji. 
+                    </p>
+                    
+                    
+                    <button class="HireMeButton" onclick="openWindow()"><p>Hire Me</p></button>
+                    <div id="InsideWindow" class="InsideWindow">
+                        <div id="InsideWindow-Content" class="InsideWindow-Content"> <!-- Zawartość wyświetlanego okienka dla przycisku "Hire Me"-->
+                            <img src="images/ins.png" class="BgIMGHireMe" alt="">
+                            
+
+                                <!-- Przyciski do sterowania grą Lewo&Prawo-->
+                            <button id="Wlewo" class="Wlewo"></button>                           
+                            <button id="Wprawo" class="Wprawo"></button>
+                                <img id="image" class="Screen" src="images/Tlo.jpg" alt="Menu wewnętrzne">
+                                <!-- kółka pokazujące w którym miejscu tablicy aktualnie się znajdujesz -->
+                                <div id="circle" class="circle"></div>
+                                <div id="circle1" class="circle1"></div>
+                                <div id="circle2" class="circle2"></div>
+                                <div id="circle3" class="circle3"></div>
+                                <div id="circle4" class="circle4"></div>
+
+                                <!-- Przyciski do wyświetlania streszczenia okienka -->
+                            <button class="Wgore"></button>
+                            <button class="Wdol"></button>
+
+                                <!-- Przycisk ukrywający boczne okienko bez przechodzenia na dalsze indexy-->
+                            <div class="HideText">Hide</div>
+                            <button id="Hide" class="Hide"></button>
+
+                                <!-- Przyciski do wybrania okienka do wyświetlenia -->
+                            <div class="SellectText">Sellect</div>
+                            <button id="Sellect" class="Sellect" ></button>
+                                <div id="BoczneOknoDlaZdj" class="BoczneOknoDlaZdj ">
+
+                                    <div class="GraLogo"><p>GRA</p></div>
+                                    <div class="OpisGry">
+
+                                        <p>
+                                            Jest to interaktywne nintendo dostosowane do moich potrzeb. Na pomysł wykorzystania go wpadłem przeglądając losowo grafiki na pinterest.
+                                            Pierwszym pomysłem realizacji było owalne menu jednak jak zobaczyłem tą grafikę musiałem z niej koniecznie skorzystać. 
+                                            Wcześniej takiego pomysłu nigdzie nie widziałem, dlatego uważam, że jest to orginalne i pomysłowe wyjście. 
+                                            Finalnie uważam, że całe menu wyszło bardzo przyjemnie dla oka, a pokazuje również pomysłowość jak i nieograniczone możliwości Frontend'u.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                                <div id="BoczneOknoDlaZdj1" class="BoczneOknoDlaZdj1"></div>
+                                <div id="BoczneOknoDlaZdj2" class="BoczneOknoDlaZdj2"></div>
+                                <div id="BoczneOknoDlaZdj3" class="BoczneOknoDlaZdj3">
+                                    <div class="OpisMenu"><p>Znajdź coś co cię interesuje i kliknij :) </p></div>
+                                    <div class="MenuUmiejetnosci">
+                                        
+                                        <button id="ToLeftButton" class="ToLeft">
+                                            <img id="imageInsideUmiejetnosci" class="Triagle" src="images/Strzałka.png" alt="W lewo">
+                                        </button>
+                                        <button id="ToRightButton" class="ToRight">
+                                            <img id="imageInsideUmiejetnosci" class="Triagle2" src="images/Strzałka.png" alt="W prawo">
+                                        </button>
+                                        <button id="CardInsideMenuUmiejetnosci" class="Card">
+                                            <img id="imageInsideUmiejetnosci3" class="MenuInsideUmiejetnosci" src="images/ProgramowanieUmiejetnosciTlo.png" alt="Menu wewnętrzne">
+                                            
+                                            <div id="FirstImageInsideSkills" class="FirstImageInsideSkills">
+                                                <img class="ProgramowanieTloIMG" src="images/ProgramowanieTlo.png">
+                                                <span id="CloseMe"><img class="Strzałka" src="images/Strzałka.png"></span>
+                                            </div>
+                                            <div id="SecondImageInsideSkills" class="SecondImageInsideSkills">
+                                                <span id="CloseMe1"><img class="Strzałka" src="images/Strzałka.png"></span>
+                                                    <div class="Task">
+                                                        <input type="checkbox" id="myCheckbox">
+                                                        <label id="TextToStrike1" class="myCheckboxText" for="myCheckbox">Task-1</label>
+                                                    </div>
+                                                    <p class="Zastosowanie">Zastosowanie Jiry w projektach</p>
+                                                    <div class="Icons">    
+                                                        <div class="attachment">
+                                                            <img  src="images/Attachment.png" alt="">
+                                                        </div>
+                                                        <div class="ChildTicket">
+                                                            <img src="images/ChildTicket.png" alt="">
+                                                        </div>
+                                                        <div class="link">
+                                                            <img src="images/link.png" alt="">
+                                                        </div>
+                                                        <div class="MenuInsideJiraPage">
+                                                            <img src="images/Kropki.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="OpisPodzadaniaWykres">
+                                                        <p class="OpisPodzadania">Opis</p>
+                                                        <p class="DodajOpis">Dodaj opis...</p>
+                                                        <div>
+                                                            <p class="Podzadania">Podzadania</p>
+                                                            <img class="Kropki" src="images/Kropki.png" alt="">
+                                                            <img class="Plus" src="images/plus.png">
+                                                            <div class="WykresLiniowyZielony"></div>
+                                                            <div class="WykresLiniowyNiebieski"></div>
+                                                            <p class="Gotowe">Gotowe  66,6%</p>
+                                                        </div>
+                                                        
+                                                        <div class="Taski">
+                                                            <div class="PierwszyTask">
+                                                                <input type="checkbox" class="Pro-01" id="Pro2">
+                                                                <label id="TextToStrike2" for="Pro2">Pro-01</label>
+                                                                <p>Strona Wizytówkowa</p>
+                                                                <img class="Priorytet1" src="images/PiorityMedium.png">
+                                                                <div class="KolkoNaLogo">
+                                                                    <img src="images/logo.png">
+                                                                </div>
+                                                                <div class="Gotowe1">Gotowe</div>
+                                                            </div>
+                                                            
+                                                            <div class="DrugiTask">
+                                                                <input type="checkbox" class="Pro-02" id="Pro3">
+                                                                <label id="TextToStrike3" for="Pro3">Pro-02</label>
+                                                                <p>Nawodnienie</p>
+                                                                <img class="Priorytet2" src="images/PiorityLow.png">
+                                                                <div class="KolkoNaLogo2">
+                                                                    <img src="images/logo.png">
+                                                                </div>
+                                                                <div class="DoZrobienia">Do Zrobienia</div>
+                                                            </div>
+                                                            
+                                                            <div class="TrzeciTask">
+                                                                <input type="checkbox" class="Pro-03" id="Pro4">
+                                                                <label id="TextToStrike4" for="Pro4">Pro-03</label>
+                                                                <p>Projekt na Uczelnię</p>
+                                                                <img class="Priorytet3" src="images/PiorityMedium.png">
+                                                                <div class="KolkoNaLogo3">
+                                                                    <img src="images/logo.png">
+                                                                </div>
+                                                                <div class="Gotowe2">Gotowe</div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="Komentarz">
+                                                            <p class="Aktywność" >Aktywność</p>
+                                                            <p class="Pokaz" >Pokaż: </p>
+                                                            <div class="Komentarze">Komentarze  v</div>
+                                                            <div class="KolkoNaLogo4">
+                                                                <img src="images/logo.png">
+                                                            </div>
+                                                            <input id="DodajKomentarzInput" type="text" placeholder="Dodaj komentarz...">
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+
+
+
+                                            </div>
+                                            <div id="ThirdImageInsideSkills" class="ThirdImageInsideSkills">
+                                                <span id="CloseMe2"><img class="Strzałka" src="images/Strzałka.png"></span>
+                                                <div class="shadow"></div>
+                                                <img class="OfficeLogo" src="images/OfficeLogo.png">
+                                                <img class="ExcelPNG" src="images/ExcelPNG.png"> 
+                                                <img class="OneNotePNG" src="images/OneNotePNG.png">
+                                                <img class="OutlookPNG" src="images/OutlookPNG.png">
+                                                <img class="PowerPointPNG" src="images/PowerPointPNG.png">
+                                                <img class="TeamsPNG" src="images/TeamsPNG.png">
+                                                <img class="WordPNG" src="images/WordPNG.png">
+                                                <div class="shadowForSkype"></div>
+                                                <img class="SkypePNG" src="images/SkypePNG.png">
+                                                <div class="TekstOffice">
+                                                    <p>
+                                                        Szeroko rozwinięta ogólna podstawowa wiedza zdobyta na potrzebę pracy, uczelni jak i życia codziennego
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div id="FourthImageInsideSkills" class="FourthImageInsideSkills">
+                                                <span id="CloseMe3"><img class="Strzałka" src="images/Strzałka.png"></span>
+                                                <img class="GitLogo" src="images/GitLogo.png">
+                                                <p>
+                                                    Przygoda z Github'em zaczęła się od chęci znalezienia pracy w IT. Większość firm korzysta właśnie z Github'a, dlatego umiejętność poruszania się i zrozumienia mechanizmu była kluczowa do zainteresowania potencjalnego pracodawcy. Moja nauka skończyła się na etapie zrozumienia mechanizmu i sensu używania github'a. Powrócę do nauki w momencie konieczności wstawienia zaprezentowanego projektu na ową platformę.
+                                                </p>
+                                            </div>
+
+                                        </button>
+            
+                                    </div>
+                                    <div id="Circle1" class="Circle1"></div>
+                                    <div id="Circle2" class="Circle2"></div>
+                                    <div id="Circle3" class="Circle3"></div>
+                                    <div id="Circle4" class="Circle4"></div>
+
+                                </div>
+                                <div id="BoczneOknoDlaZdj4" class="BoczneOknoDlaZdj4">
+                                    <img class="Szesciokat1" src="images/SzesciokatElektromonterInstalacjiElektrycznych.png">
+                                    <img class="Szesciokat2" src="images/SzesciokatElektromonter.png">
+                                    <img class="Szesciokat3" src="images/SzesciokatJuniorSDConsultant.png">
+                                    
+                                </div>
+                            
+                                <!-- Przycisk zamykający grę oraz opis -->
+                            <div class="Close">Close</div>
+                            <button id="CloseButton" class="End"></button>
+                        </div>
+                    </div>
+                    
+                    <button class="LetsTalkButton" onclick="openingWindow()"><p>Let's Talk</p></button>
+                    <div id="IWTalk" class="InsideWindowTalk">
+                        <div class="InsideWindow-ContentTalk"> <!-- Zawartość wyświetlanego okienka dla przycisku "Let's Talk"-->
+                            <span onclick="closedWindow()" style="float:left; cursor:pointer;">&times;</span>
+                            <div class="ContactForm">Wybierz formę kontaktu</div>
+                            
+                            <button class="sms" onclick="openInsideWindow()">SMS</button>
+                            <div id="InsideSMSButton"class="InsideSMSButton"> <!-- Zawartość wyświetlanego okienka dla przycisku "SMS"-->
+                                <span id="closeSms" onclick="closeInsideWindow()" style="float:left; cursor:pointer;">&times;</span>
+                                <form id="SmsForm">
+                                    <div class="Opispodkatem1">SMS</div>
+                                    <input class="SmsPhoneNumber" type="text" id="PhoneNumber" placeholder="Numer Telefonu">
+                                    <textarea class="SmsMessageArea" id="message" placeholder="Treść wiadomości..."></textarea>
+                                    <button class="SmsSubmitButton" type="submit">Wyślij SMS</button>
+                                </form>
+                            </div>
+
+                            <button class="email" onclick="openedInsideWindow()">E-mail</button>
+                            <div id="InsideEmailButton"class="InsideEmailButton"> <!-- Zawartość wyświetlanego okienka dla przycisku "E-mail"-->
+                                <span id="closeEmail" onclick="closeedInsideWindow()" style="float:left; cursor:pointer;">&times;</span>
+                                    <form id="emailForm">
+                                        <div class="Opispodkatem2">Email</div>
+                                        <input class="AdresEmail" type="email" id="emailAddress" placeholder="Adres e-mail">
+                                        <textarea class="EmailMessage" id="message" placeholder="Treść wiadomości..."></textarea>
+                                        <button class="EmailSubmitButton" type="submit" id="sendEmailButton">Wyślij e-mail</button>
+                                    </form>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ProfilePicture"></div>
+                
+            </div>
+          
+    <script src="script.js"></script>
+            
+    
+    </body>
+</html>
+
+
+
