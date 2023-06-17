@@ -1816,7 +1816,9 @@ span{
     border-radius: 50%;
 }
 
-.Szesciokat1{
+/*  */
+.Szesciokat1
+{
     position: absolute;
     top: 135px;
     left: 0px;
@@ -1825,11 +1827,13 @@ span{
     transition: transform 0.8s ease;
 }
 
-.Szesciokat1:hover{
+.Szesciokat1:hover
+{
     transform: rotateY(180deg);
 }
 
-.Szesciokat2{
+.Szesciokat2
+{
     position: absolute;
     top: 330px;
     left: 0px;
@@ -1837,7 +1841,8 @@ span{
     height: 210px;
 }
 
-.Szesciokat3{
+.Szesciokat3
+{
     position: absolute;
     top: 435px;
     left: 170px;
