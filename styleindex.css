@@ -1817,38 +1817,38 @@ span{
 }
 
 /*  */
-.Szesciokat1
-{
-    position: absolute;
-    top: 135px;
-    left: 0px;
-    width: 210px;
-    height: 210px;
-    transition: transform 0.8s ease;
+.Szesciokat2{
+     position: absolute;
+     top: 135px;
+     left: 0px;
+     width: 210px;
+     height: 210px;
+     transition: transform 0.8s ease;
+
 }
 
-.Szesciokat1:hover
-{
-    transform: rotateY(180deg);
-}
+.Szesciokat2:hover{
+     transform: rotateY(180deg);
 
-.Szesciokat2
-{
-    position: absolute;
-    top: 330px;
-    left: 0px;
-    width: 210px;
-    height: 210px;
-}
+    }
 
-.Szesciokat3
-{
-    position: absolute;
-    top: 435px;
-    left: 170px;
-    width: 210px;
-    height: 210px;
-}
+.Szesciokat3{
+     position: absolute;
+     top: 330px;
+     left: 0px;
+     width: 210px;
+     height: 210px;
+
+    }
+
+.Szesciokat4{
+     position: absolute;
+     top: 435px;
+     left: 170px;
+     width: 210px;
+     height: 210px;
+
+    }
 
 
   
