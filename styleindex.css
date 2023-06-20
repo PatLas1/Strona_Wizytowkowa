@@ -1817,7 +1817,6 @@ span{
 }
 
 /*  */
-<<<<<<< HEAD
 .Szesciokat1{
     position: absolute;
     top: 135px;
@@ -1910,25 +1909,6 @@ span{
 
 .Szesciokat2{
      position: absolute;
-=======
-.Szesciokat2{
-     position: absolute;
-     top: 135px;
-     left: 0px;
-     width: 210px;
-     height: 210px;
-     transition: transform 0.8s ease;
-
-}
-
-.Szesciokat2:hover{
-     transform: rotateY(180deg);
-
-    }
-
-.Szesciokat3{
-     position: absolute;
->>>>>>> b59a7985ec6206109d3c465cd511daf65ab090f4
      top: 330px;
      left: 0px;
      width: 210px;

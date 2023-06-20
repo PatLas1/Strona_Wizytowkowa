@@ -508,7 +508,6 @@ checkbox4.addEventListener("change",function(){
     }else{
         text4.classList.remove("StrikeThrough");
     }
-<<<<<<< HEAD
 });
 
 //Funkcja do pokazania okienka po najechaniu na okienko: "Hire Me -> Przeszłość Zawodowa -> Monter Instalacji Elektrycznych"
@@ -537,6 +536,3 @@ box.addEventListener('mouseleave', function(){
 });
 
 
-=======
-});
->>>>>>> b59a7985ec6206109d3c465cd511daf65ab090f4
