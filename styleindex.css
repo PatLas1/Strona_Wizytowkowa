@@ -1817,38 +1817,113 @@ span{
 }
 
 /*  */
-.Szesciokat2{
-     position: absolute;
-     top: 135px;
-     left: 0px;
-     width: 210px;
-     height: 210px;
-     transition: transform 0.8s ease;
-
+.Szesciokat1{
+    position: absolute;
+    top: 135px;
+    left: 0px;
+    width: 250px;
+    height: 235px;
+    transition: transform 0.8s ease; 
+    overflow: hidden;  
 }
 
-.Szesciokat2:hover{
-     transform: rotateY(180deg);
+.Szesciokat1 img{
+    top: 0px;
+    left: 0;
+    width: 250px;
+    height: 250px;
+}
 
+.Szesciokat1 .two{
+    position: absolute;
+    top: 250px;
+}
+
+
+
+.ElectromonterAnim{
+    animation: ShowMe 0.8s linear ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ShowMe{
+    0%{
+        opacity: 0;
+        transform: translateY(0px);
     }
+    100%{
+        opacity: 1;
+        transform: translateY(-250px);
+    }
+}
 
-.Szesciokat3{
+.ElectromonterAnimOut{
+    animation: DShowMe 0.8s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes DShowMe{
+    0%{
+        opacity: 1;
+        transform: translateY(-250px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
+.ButtonReadMore{
+    display: block;
+    position: absolute;
+    /*border: 0;*/
+    background-color: transparent;
+    top: 110px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Szesciokat2{
      position: absolute;
      top: 330px;
      left: 0px;
      width: 210px;
      height: 210px;
 
-    }
+}
 
-.Szesciokat4{
+.Szesciokat3{
      position: absolute;
      top: 435px;
      left: 170px;
      width: 210px;
      height: 210px;
 
-    }
+}
 
 
   

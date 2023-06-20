@@ -509,3 +509,30 @@ checkbox4.addEventListener("change",function(){
         text4.classList.remove("StrikeThrough");
     }
 });
+
+//Funkcja do pokazania okienka po najechaniu na okienko: "Hire Me -> Przeszłość Zawodowa -> Monter Instalacji Elektrycznych"
+
+var AnimacjaElektromonter = document.getElementById('two');
+var box = document.getElementById('Szesciokat1');
+
+
+box.addEventListener('mouseenter', function(){   
+    AnimacjaElektromonter.classList.add('ElectromonterAnim');
+});
+
+box.addEventListener('mouseleave', function(){
+    
+    AnimacjaElektromonter.classList.add('ElectromonterAnimOut');
+    
+    //Opóźnienie w usunięciu klasy Animacji po najechaniu
+    setTimeout(function(){
+        AnimacjaElektromonter.classList.remove('ElectromonterAnim');
+        
+    }, 100);
+    //Opóźnienie w usunięciu klasy Animacji po zjechaniu 
+    setTimeout(function(){   
+        AnimacjaElektromonter.classList.remove('ElectromonterAnimOut');
+    }, 800);
+});
+
+
